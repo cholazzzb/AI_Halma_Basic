@@ -6,8 +6,9 @@ typedef struct {
     int y;
 } Position;
 
-void createPosition(Position *P, int x, int y);
-int getXPosition(Position *P);
-int getYPosition(Position *P);
+void CreatePosition(Position *position, int x, int y);
+int GetXPosition(Position *position);
+int GetYPosition(Position *position);
+Position RangeBetweenPosition(Position *position1, Position *position2);
 
 #endif

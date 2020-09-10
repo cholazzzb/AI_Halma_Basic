@@ -1,16 +1,23 @@
-#include <stdio.h>
 #include "position.h"
 
-void createPosition(Position *P, int x, int y)
+void CreatePosition(Position *position, int x, int y)
 {
-    (*P).x = x;
-    (*P).y = y;
+    (*position).x = x;
+    (*position).y = y;
 }
 
-int getXPosition(Position *P){
-    return (*P).x;
+int GetXPosition(Position *position){
+    return (*position).x;
 }
 
-int getYPosition(Position *P){
-    return (*P).y;
+int GetYPosition(Position *position){
+    return (*position).y;
 }
+
+Position RangeBetweenPosition(Position *position1, Position *position2){
+    Position range;
+    range.x = (*position2).x - (*position1).x;
+    range.y = (*position2).y - (*position1).y;
+    return range;
+}
+
